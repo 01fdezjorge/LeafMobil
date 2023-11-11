@@ -1,0 +1,103 @@
+body {
+    font-family: "Trebuchet MS";
+    background-color: #181a1b;
+    font-size: 1.3rem;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.menu a:hover {
+    color: blue;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: bold;
+    background-color: #0036bb;
+}
+
+.menu-container img {
+    max-width: 12%;
+    height: auto;
+    margin-left: 40px;
+}
+
+.description-compagnie {
+    background-color: lightcyan;
+    margin: 20px;
+    padding: 10px;
+}
+
+.description-compagnie h1 {
+    text-align: center;
+    color: darkred;
+}
+
+.description-compagnie h1 .first-color {
+    color: black;
+}
+
+
+
+.map {
+    background-color: lightcyan;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.map img {
+    width: 60%;
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.description-services {
+    background-color: lightcyan;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+
+.content {
+    color: #d6d3cd;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
