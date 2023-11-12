@@ -1,8 +1,9 @@
 from flask import Flask, render_template, url_for
 from datetime import datetime
+import sqlite3
 
 app = Flask(__name__)
-app.config['LEAFMOBIL_DATABASE_URL'] = 'sqlite:///LeafMobilDatabse.db'
+app.config['LEAFMOBIL_DATABASE_URL'] = 'sqlite:///LeafMobilDatabase.db'
 # db = SQLAlchemy(app)
 
 # class TodoList(db.Model):
@@ -15,7 +16,16 @@ app.config['LEAFMOBIL_DATABASE_URL'] = 'sqlite:///LeafMobilDatabse.db'
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
-	return render_template('index.html')
+
+	conn = sqlite3.connect('LeafMobilDatabase.db')
+	cursor = conn.cursor()
+
+	cursor.execute('SELECT * FROM CLIENT')
+	data = cursor.fetchall()
+
+	conn.close()
+
+	return render_template('index.html', data=data)
 
 @app.route('/location')
 def location():
